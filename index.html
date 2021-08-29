@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script>
+        function setIframeSource() {
+            var theSelect = document.getElementById('location');
+            var theIframe = document.getElementById('myIframe');
+            var theUrl;
+            theUrl = theSelect.options[theSelect.selectedIndex].value;
+            theIframe.src = theUrl;
+        }
+    </script>
+</head>
+<body>
+    <center>
+    <form id="form1" method="post">
+       <label> Select Orbit</label>
+        <select id="location" onchange="setIframeSource()"> 
+                                <option value="1s.html">1s</option>
+                                 <option value="2p.html">2p</option>
+                                 <option value="2s.html">2s</option>
+                                 <option value="3d.html">3d</option>
+                                 <option value="3p.html">3p</option>
+                                 <option value="3s.html">3s</option>
+                                 <option value="4d.html">4d</option>
+                                 <option value="4f.html">4f</option>
+                                 <option value="4p.html">4p</option>
+                                 <option value="4s.html">4s</option>
+                                 </select></br></br>
+    </form>
+    <iframe id="myIframe" src="1s.html" frameborder="0" marginwidth="0" marginheight="0" width="1200" height="1800"></iframe>
+        <br><br><hr/>
+    </center>    
+    </body>
+</html>
